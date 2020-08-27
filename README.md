@@ -20,6 +20,12 @@ These changes are based on the Ender 3 [example configuration](https://github.co
 * Swapped enslosure fan and hot end fan wiring on board: Disable enslosure fan
 * Set hot end fan to pin E0_AUTO_FAN_PIN FAN1_PIN
 
+## Cura Start G-Code
+    M190 S{material_bed_temperature_layer_0} ;Wait for bed to reach temp before proceeding
+    G28 ; Home all axes
+    G29 ; Auto level bed
+    M109 S{material_print_temperature_layer_0} ;Wait for extruder to reach temp before proceeding  
+
 ## Z-Offset
 Instructions:
 1. G28 - Home printer
